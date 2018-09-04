@@ -22,7 +22,7 @@
                      :name="item.name"
                      @on-close="closePage" @click.native="linkTo(item)" :closable="item.name!=='home'"
                      :color="itemColor(item)">
-                    {{ item.title }}
+                    {{ item.meta.title }}
                 </Tag>
             </transition-group>
         </div>
@@ -80,7 +80,7 @@
                 this.$store.commit('removeTag', name)
                 // this.$store.commit('closePage', name)
                 pageOpenedList = this.$store.state.app.pageOpenedList
-                localStorage.pageOpenedList = JSON.stringify(pageOpenedList)
+                // localStorage.pageOpenedList = JSON.stringify(pageOpenedList)
                 if (this.currentPageName === name) {
                     this.linkTo(lastPageObj)
                 }

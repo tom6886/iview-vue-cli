@@ -1,0 +1,390 @@
+@import 'tool.less';
+@import 'tablist-component.less';
+
+.margin-top-8 {
+  margin-top: 8px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-100 {
+  margin-bottom: 100px;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.padding-left-6 {
+  padding-left: 6px;
+}
+
+.padding-left-8 {
+  padding-left: 5px;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.padding-left-20 {
+  padding-left: 20px;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.height-120px {
+  height: 100px;
+}
+
+.height-200px {
+  height: 200px;
+}
+
+.height-492px {
+  height: 492px;
+}
+
+.height-460px {
+  height: 460px;
+}
+
+.line-gray {
+  height: 0;
+  border-bottom: 2px solid #dcdcdc;
+}
+
+.nopaddingTop {
+  padding-top: 0 !important;
+}
+
+.nopaddingBot {
+  padding-bottom: 0 !important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.notwrap {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.padding-left-5 {
+  padding-left: 10px;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.fullbox {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.ivu-input[disabled], fieldset[disabled] .ivu-input {
+  color: #333;
+}
+
+label {
+  margin: 0;
+}
+
+/*
+*系统布局重置(表单页面）
+*/
+@color-white: #fff;
+
+.wrap-layout {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  .wrap-content {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    background: @color-white;
+    box-sizing: border-box;
+  }
+  #wrapscroll {
+    background: transparent;
+  }
+  .wrap-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: @color-white;
+    box-sizing: border-box;
+  }
+}
+
+.wrap-item {
+  position: relative;
+  background: @color-white;
+  padding: 10px;
+  padding-top: 40px;
+  .title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 25px;
+    padding: 0 10px;
+    padding-right: 0;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: #2d8cf0;
+    font-size: 15px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      background: #2d8cf0;
+      top: 0px;
+      left: 0;
+      bottom: 5px;
+    }
+  }
+  .content {
+    padding: 10px 0;
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.wrapitemform {
+  position: relative;
+  padding-bottom: 55px;
+  .footer {
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+.wrapctive {
+  padding-top: 46px;
+}
+
+.nofooter {
+  padding-bottom: 10px;
+}
+
+/*
+*列表页面布局
+*/
+.bm-list-layout {
+  position: relative;
+  padding-top: 40px;
+  height: 100%;
+  background: @color-white;
+  box-sizing: border-box;
+  overflow: hidden;
+  .bm-list-head {
+    position: absolute;
+    height: 35px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    .title {
+      float: left;
+      font-size: 14px;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 10px;
+      background: #e38000;
+      cursor: pointer;
+      color: #fff;
+      .border-top-left-radius(5px);
+      .border-top-right-radius(5px);
+      i {
+        margin-right: 5px;
+      }
+    }
+    .tool {
+      float: right;
+      padding-top: 5px;
+      padding-right: 10px;
+    }
+  }
+  .bm-list-content {
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.tablelist-layout {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.table-search {
+  padding-top: 40px;
+  .search {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+.tablelist-page {
+  padding-bottom: 55px;
+}
+
+.showcheckflag .ivu-form-item-label:before {
+  content: "*";
+  display: inline-block;
+  margin-right: 4px;
+  line-height: 1;
+  font-family: SimSun;
+  font-size: 12px;
+  color: #ed3f14;
+}
+
+.hidecheckflag {
+  .ivu-form-item-label {
+    &:before {
+      content: "";
+    }
+  }
+  .ivu-input {
+    border-color: #dddee1;
+    &:hover {
+      border-color: #57a3f3;
+    }
+    &:focus {
+      border-color: #57a3f3;
+      box-shadow: rgb(87, 163, 243, .2);
+    }
+  }
+  .ivu-form-item-error-tip {
+    display: none;
+  }
+}
+
+.ivu-input-group-append .append-primary-btn {
+  background: #2d8cf0;
+  border-color: #2d8cf0;
+  color: #fff;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.drawer-close-btn {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  z-index: 999;
+  width: 25px;
+  height: 25px;
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer-fixed {
+  position: relative;
+  padding-bottom: 55px;
+  .footer {
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.tablelist-layout {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  .table-wrap {
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.tablelist-page {
+  padding-bottom: 55px;
+}
+
+.footer-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.vertical-center-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ivu-modal {
+    top: 0;
+  }
+}
+
+.ivu-modal-body {
+  padding: 10px;
+}
+
+.modal-no-footer {
+  .ivu-modal-footer {
+    display: none;
+  }
+}
+
+.ivu-table-cell {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ivu-form-item {
+  margin-bottom: 5px;
+}
+
+.ivu-form-item-error-tip {
+  display: none;
+}
+
+.ivu-select-dropdown-list {
+  max-height: 300px;
+}
+
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+  color: #333;
+}

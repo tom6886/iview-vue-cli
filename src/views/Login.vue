@@ -32,6 +32,7 @@
 </template>
 <script>
     import Cookies from "js-cookie";
+    import {setStore} from '../utils/storage'
 
     export default {
         data() {
@@ -110,6 +111,8 @@
                         return false
                     }
 
+                    this.$store.commit('setUserInfo', res.user)
+                    setStore("accessToken", res.token);
                     Cookies.set("userInfo", res.data.user);
 
                     this.$router.push({

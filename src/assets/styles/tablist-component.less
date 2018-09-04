@@ -1,0 +1,45 @@
+@import 'common.less';
+@import 'tool.less';
+
+@tab-color: #33373b;
+@tab-color-hover: #e38000;
+@tab-color-white: #fff;
+/*
+*头部TAB导航样式
+*/
+
+.bm-tab-nav-head {
+  float: left;
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  li {
+    float: left;
+    padding: 0 10px;
+    margin-right: 10px;
+    height: 34px;
+    line-height: 34px;
+    .border-radius(5px);
+    .border-bottom-left-radius(0px);
+    .border-bottom-right-radius(0px);
+    background: @tab-color;
+    cursor: pointer;
+    color: @tab-color-white;
+    &:hover {
+      background: @tab-color-hover;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+  li.active {
+    background: @tab-color-hover;
+  }
+}
